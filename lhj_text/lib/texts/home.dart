@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 /// 导入生成随机字符串的语言包
 import 'package:english_words/english_words.dart';
 
+
 /* 
 首页：
     继承自StatefulWidget，即有状态的类；
@@ -133,16 +134,31 @@ class NewRoute extends StatelessWidget {
   }
 }
 
-class ImgRoute extends StatelessWidget {
-  @override
-
+class Img extends StatelessWidget {
+  // @override
   Widget build(BuildContext context) {
-    return new DecoratedBox(
-      decoration: new BoxDecoration(
-        image: new DecorationImage(
-          image: new AssetImage("images/我的客户.png"),
-        ),
+    // return new DecoratedBox(
+    //   decoration: new BoxDecoration(
+    //     image: new DecorationImage(
+    //       image: new AssetImage("images/我的客户.png"),
+    //     ),
+    //   ),
+    // );
+    return Image.asset('images/我的客户.png');
+  }
+}
+
+class ImgRoute extends StatelessWidget{
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("图片显示"),
+        backgroundColor: Colors.grey,
+      ),
+      body: Center( 
+        child:Img(),
       ),
     );
   }
 }
+

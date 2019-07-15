@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lhj_text/texts/home.dart';
+import 'package:lhj_text/texts/text_1.1_widget.dart';
 
 /* 
 应用入口
@@ -24,8 +25,10 @@ class MyApp extends StatelessWidget {
       // 命名路由，注册路由表
       routes: {
         // key是一个字符串，为路由的名称。value是个builder回调函数，用于生成相应的widget
-        "new_page":(context)=>NewRoute(),
+        // "new_page":(context)=>NewRoute(),
         // "new_page":(context)=>ImgRoute(),
+        "new_page":(context)=>WidgetText(),
+
       },
 
       // 应用的首页路由Route（即页面，在iOS中相当于VC）
