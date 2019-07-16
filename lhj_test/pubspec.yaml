@@ -1,6 +1,6 @@
 
 # 该文件为项目配置文件
-name: lhj_text # 应用名或包名
+name: lhj_test # 应用名或包名
 description: A new Flutter project. # 应用或包的简介/描述
 
 version: 1.0.0+1 # 应用或包的版本号
@@ -35,9 +35,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+   - lib/images/二维码.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

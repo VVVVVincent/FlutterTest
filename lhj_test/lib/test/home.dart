@@ -144,7 +144,8 @@ class Img extends StatelessWidget {
     //     ),
     //   ),
     // );
-    return Image.asset('images/我的客户.png');
+    // 加载本地图片 lib/images/二维码@2x.png
+    return Image.asset('lib/images/二维码@2x.png');
   }
 }
 
