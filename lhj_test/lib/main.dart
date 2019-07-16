@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lhj_test/test/home.dart';
-import 'package:lhj_test/test/test_1.1_widget.dart';
+import 'package:lhj_test/dartTest/home.dart';
+import 'package:lhj_test/dartTest/test_1.1_widget.dart';
+import 'package:lhj_test/dartTest/test_1.2_text.dart';
 /* 
 应用入口
 */
@@ -25,8 +26,9 @@ class MyApp extends StatelessWidget {
       routes: {
         // key是一个字符串，为路由的名称。value是个builder回调函数，用于生成相应的widget
         // "new_page":(context)=>NewRoute(),
-        "new_page":(context)=>ImgRoute(),
+        // "new_page":(context)=>ImgRoute(),
         // "new_page":(context)=>WidgetText(),
+        "new_page":(context)=>TextWidget(),
 
       },
 
