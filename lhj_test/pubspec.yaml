@@ -32,12 +32,17 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  # 使用Material Design字体图标
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   assets:
    - lib/images/二维码@2x.png
    - lib/images/删除@2x.png
+   - lib/images/bank.png
+   - lib/images/logo.png
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

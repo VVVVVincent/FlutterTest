@@ -79,12 +79,15 @@ class IconButtonWidget extends StatelessWidget {
 class CusButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlatButton(
-      child: Text(""),
+      child: Text("CustomButton"),
+      color: Colors.blue,
       onPressed: _pressed,
-      textColor: Colors.cyan,
-
+      textColor: Colors.white,
+      highlightColor: Colors.grey,// 按钮点击时的高亮颜色
+      splashColor: Colors.yellow,//按钮点击时的水波颜色
+      colorBrightness: Brightness.dark,//按钮主题，默认时浅色主题
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),//按钮的外形,边框弧度
     );
-
   }
 }
 
@@ -104,7 +107,7 @@ class ButtonWidget extends StatelessWidget {
               FlatButtonWidget(),
               OutlineButtonWidget(),
               IconButtonWidget(),
-
+              CusButtonWidget(),
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),
