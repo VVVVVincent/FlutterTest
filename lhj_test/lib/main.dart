@@ -4,6 +4,7 @@ import 'package:lhj_test/dartTest/test_1.1_widget.dart';
 import 'package:lhj_test/dartTest/test_1.2_text.dart';
 import 'package:lhj_test/dartTest/test_1.3_button.dart';
 import 'package:lhj_test/dartTest/test_1.4_iconImg.dart';
+import 'package:lhj_test/dartTest/test_1.5_checkbox.dart';
 
 /* 
 应用入口
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>WidgetText(),
         // "new_page":(context)=>TextWidget(),
         // "new_page":(context)=>ButtonWidget(),
-        "new_page":(context)=>IconImgWidget(),
-        
+        // "new_page":(context)=>IconImgWidget(),
+        "new_page":(context)=>SwitchAndCheckBoxTest(),
 
       },
 
