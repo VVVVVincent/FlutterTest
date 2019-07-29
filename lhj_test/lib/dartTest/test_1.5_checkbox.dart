@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 所以它们本身不会保存当前选择状态，所以一般都是在父widget中管理选中状态；)
 当用户点击Switch或Checkbox时，它们会触发onChanged回调，我们可以在此回调中处理选中状态改变逻辑；
  */
-class SwitchAndCheckBoxTestRoute extends StatefulWidget {
+class SwitchAndCheckBoxTest extends StatefulWidget {
   @override 
 
-  _SwitchAndCheckBoxTestRouteState createState() => new _SwitchAndCheckBoxTestRouteState();
+  _SwitchAndCheckBoxTestState createState() => new _SwitchAndCheckBoxTestState();
 }
 
-class _SwitchAndCheckBoxTestRouteState extends State<SwitchAndCheckBoxTestRoute> {
+class _SwitchAndCheckBoxTestState extends State<SwitchAndCheckBoxTest> {
   bool _switchSelected = true; //维护单选开关
   bool _checkboxSelected = true;// 维护复选框状态
 
