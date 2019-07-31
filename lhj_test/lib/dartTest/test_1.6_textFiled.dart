@@ -101,6 +101,136 @@ class _tfWidgetState extends State<TFWidget> {
 }
 
 
+// 自定义输入框
+class CusTFWidget extends StatelessWidget {
+
+  Widget build(BuildContext context) {
+    // 设置提示文本的颜色和下划线颜色
+    return Theme(
+      data: Theme.of(context).copyWith(
+        hintColor: Colors.grey,// 定义下划线颜色
+        inputDecorationTheme: InputDecorationTheme(
+          labelStyle: TextStyle(color: Colors.grey), // 输入文本样式
+          hintStyle: TextStyle(color: Colors.grey, fontSize: 14.0)// 提示文本样式
+        )
+      ),
+
+      child: Column(
+        children: <Widget>[
+          TextField(
+            decoration: InputDecoration(
+            labelText: "用户名",
+            hintText: "用户名或邮箱",
+            prefixIcon: Icon(Icons.person),
+            border: InputBorder.none,// 隐藏下划线
+          ),
+          // cursorColor: Colors.blue,// 定义光标颜色
+         ),
+
+         TextField(
+            decoration: InputDecoration(
+            prefixIcon: Icon(Icons.lock),
+            labelText: "密码",
+            hintText: "您的登录密码",
+            hintStyle: TextStyle(color: Colors.grey, fontSize: 13.0)
+          ),
+          obscureText: true,
+         )
+
+        ],
+      ),
+    );
+  }
+
+}
+
+/*
+FormField：表单
+提供了自动验证输入内容自否合法的属性
+下例：
+  用户名不能为空，如果为空则提示
+  密码不能小于6位，如果小于6则提示
+ */
+
+class FormWidget extends StatefulWidget {
+  @override
+
+  _FormWidgetState createState() => new _FormWidgetState();
+}
+
+class _FormWidgetState extends State<FormWidget> {
+  TextEditingController _uNameC = new TextEditingController();
+  TextEditingController _uPwdC = new TextEditingController();
+  GlobalKey _formKey= new GlobalKey<FormState>();
+
+  @override 
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+
+      child: Form(
+        key: _formKey,//设置globalKey，用于后面获取FormState
+        autovalidate: true,// 开启自动验证
+        child: Column(
+          children: <Widget>[
+            TextFormField(
+              autofocus: true,
+              controller: _uNameC,
+              decoration: InputDecoration(
+                labelText: "用户名",
+                hintText: "用户名或邮箱",
+                icon: Icon(Icons.person)
+              ),
+
+              // 校验用户名
+              validator: (value){
+                return value.trim().length > 0? null:"用户名不能为空！";
+              },
+            ),
+
+            TextFormField(
+              controller: _uPwdC,
+              decoration: InputDecoration(
+                labelText: "密码",
+                hintText: "您的登录密码",
+                icon: Icon(Icons.lock)
+              ),
+              obscureText: true,
+
+              // 校验密码
+              validator: (pwd) {
+                return pwd.trim().length < 6 ?"密码不能少于6位!":null;
+              },
+            ),
+
+            // 登录按钮
+            Padding(
+              padding: const EdgeInsets.only(top: 28.0),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: RaisedButton(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text("登录"),
+                      color: Theme.of(context).primaryColor,
+                      textColor: Colors.white,
+                      onPressed: () {
+
+                      },
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+  
+}
+
+
 
 
 
@@ -117,7 +247,9 @@ class FiledWidget extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            TFWidget(),
+            // TFWidget(),
+            // CusTFWidget(),
+            FormWidget(),
             
           ],
         )
