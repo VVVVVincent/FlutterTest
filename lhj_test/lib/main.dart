@@ -6,6 +6,10 @@ import 'package:lhj_test/dartTest/test_1.3_button.dart';
 import 'package:lhj_test/dartTest/test_1.4_iconImg.dart';
 import 'package:lhj_test/dartTest/test_1.5_checkbox.dart';
 import 'package:lhj_test/dartTest/test_1.6_textFiled.dart';
+import 'package:lhj_test/dartTest/test_2.1_rowColumn.dart';
+import 'package:lhj_test/dartTest/test_2.2_flex.dart';
+import 'package:lhj_test/dartTest/test_2.3_warpOrFlow.dart';
+import 'package:lhj_test/dartTest/test_2.4_StackOrPositioned.dart';
 
 /* 
 应用入口
@@ -37,7 +41,11 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>ButtonWidget(),
         // "new_page":(context)=>IconImgWidget(),
         // "new_page":(context)=>SwitchAndCheckBoxTest(),
-        "new_page":(context)=>FiledWidget(),
+        // "new_page":(context)=>FiledWidget(),
+        // "new_page":(context)=>LineWidget(),
+        // "new_page":(context)=>FlexWidget(),
+        "new_page":(context)=>WrapFlowTest(),
+
 
       },
 
