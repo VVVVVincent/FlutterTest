@@ -10,6 +10,7 @@ import 'package:lhj_test/dartTest/test_2.1_rowColumn.dart';
 import 'package:lhj_test/dartTest/test_2.2_flex.dart';
 import 'package:lhj_test/dartTest/test_2.3_warpOrFlow.dart';
 import 'package:lhj_test/dartTest/test_2.4_StackOrPositioned.dart';
+import 'package:lhj_test/dartTest/test_2.5_align.dart';
 
 /* 
 应用入口
@@ -44,7 +45,9 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>FiledWidget(),
         // "new_page":(context)=>LineWidget(),
         // "new_page":(context)=>FlexWidget(),
-        "new_page":(context)=>WrapFlowTest(),
+        // "new_page":(context)=>WrapFlowTest(),
+        // "new_page":(context)=>StackPositionedWidget(),
+        "new_page":(context)=>AlignWidget(),
 
 
       },

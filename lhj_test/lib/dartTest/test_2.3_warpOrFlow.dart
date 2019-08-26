@@ -49,7 +49,7 @@ Flow:
 Flow主要用于一些需要自定义布局策略或性能要求较高(如动画中)的场景;
 性能好、灵活  但是使用复杂，不能自适应子widget大小
  */
-class flowTest extends StatelessWidget {
+class FlowTest extends StatelessWidget {
   Widget build(BuildContext ctx) {
     return Flow(
       delegate: FlowTestDelegate(margin: EdgeInsets.all(10.0)),
@@ -134,7 +134,7 @@ class WrapFlowTest extends StatelessWidget {
       body: Column(
         children: <Widget>[
           WrapTest(),
-          flowTest(),
+          FlowTest(),
         ],
       ),
     );
