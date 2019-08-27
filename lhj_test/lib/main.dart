@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:lhj_test/dartTest/home.dart';
-import 'package:lhj_test/dartTest/test_1.1_widget.dart';
-import 'package:lhj_test/dartTest/test_1.2_text.dart';
-import 'package:lhj_test/dartTest/test_1.3_button.dart';
-import 'package:lhj_test/dartTest/test_1.4_iconImg.dart';
-import 'package:lhj_test/dartTest/test_1.5_checkbox.dart';
-import 'package:lhj_test/dartTest/test_1.6_textFiled.dart';
-import 'package:lhj_test/dartTest/test_2.1_rowColumn.dart';
-import 'package:lhj_test/dartTest/test_2.2_flex.dart';
-import 'package:lhj_test/dartTest/test_2.3_warpOrFlow.dart';
+import 'package:lhj_test/dartTest/test_1.1_Widget.dart';
+import 'package:lhj_test/dartTest/test_1.2_Text.dart';
+import 'package:lhj_test/dartTest/test_1.3_Button.dart';
+import 'package:lhj_test/dartTest/test_1.4_IconImg.dart';
+import 'package:lhj_test/dartTest/test_1.5_Checkbox.dart';
+import 'package:lhj_test/dartTest/test_1.6_TextFiled.dart';
+import 'package:lhj_test/dartTest/test_2.1_RowColumn.dart';
+import 'package:lhj_test/dartTest/test_2.2_Flex.dart';
+import 'package:lhj_test/dartTest/test_2.3_WarpOrFlow.dart';
 import 'package:lhj_test/dartTest/test_2.4_StackOrPositioned.dart';
-import 'package:lhj_test/dartTest/test_2.5_align.dart';
+import 'package:lhj_test/dartTest/test_2.5_Align.dart';
+import 'package:lhj_test/dartTest/test_3.1_Padding.dart';
+import 'package:lhj_test/dartTest/test_3.2_ConstrainedBox.dart';
 
 /* 
 应用入口
@@ -47,7 +49,9 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>FlexWidget(),
         // "new_page":(context)=>WrapFlowTest(),
         // "new_page":(context)=>StackPositionedWidget(),
-        "new_page":(context)=>AlignWidget(),
+        // "new_page":(context)=>AlignWidget(),
+        // "new_page":(context)=>PaddingRoute(),
+        "new_page":(context)=>SizeLimitWidget(),
 
 
       },
