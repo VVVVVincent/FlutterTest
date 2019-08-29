@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:lhj_test/dartTest/home.dart';
-import 'package:lhj_test/dartTest/test_1.1_Widget.dart';
-import 'package:lhj_test/dartTest/test_1.2_Text.dart';
-import 'package:lhj_test/dartTest/test_1.3_Button.dart';
-import 'package:lhj_test/dartTest/test_1.4_IconImg.dart';
-import 'package:lhj_test/dartTest/test_1.5_Checkbox.dart';
-import 'package:lhj_test/dartTest/test_1.6_TextFiled.dart';
-import 'package:lhj_test/dartTest/test_2.1_RowColumn.dart';
-import 'package:lhj_test/dartTest/test_2.2_Flex.dart';
-import 'package:lhj_test/dartTest/test_2.3_WarpOrFlow.dart';
-import 'package:lhj_test/dartTest/test_2.4_StackOrPositioned.dart';
-import 'package:lhj_test/dartTest/test_2.5_Align.dart';
-import 'package:lhj_test/dartTest/test_3.1_Padding.dart';
-import 'package:lhj_test/dartTest/test_3.2_ConstrainedBox.dart';
+import 'package:lhj_test/dartTest/1_基础组件/test_1.1_Widget.dart';
+import 'package:lhj_test/dartTest/1_基础组件/test_1.2_Text.dart';
+import 'package:lhj_test/dartTest/1_基础组件/test_1.3_Button.dart';
+import 'package:lhj_test/dartTest/1_基础组件/test_1.4_IconImg.dart';
+import 'package:lhj_test/dartTest/1_基础组件/test_1.5_Checkbox.dart';
+import 'package:lhj_test/dartTest/1_基础组件/test_1.6_TextFiled.dart';
+import 'package:lhj_test/dartTest/2_布局类组件/test_2.1_RowColumn.dart';
+import 'package:lhj_test/dartTest/2_布局类组件/test_2.2_Flex.dart';
+import 'package:lhj_test/dartTest/2_布局类组件/test_2.3_WarpOrFlow.dart';
+import 'package:lhj_test/dartTest/2_布局类组件/test_2.4_StackOrPositioned.dart';
+import 'package:lhj_test/dartTest/2_布局类组件/test_2.5_Align.dart';
+import 'package:lhj_test/dartTest/3_容器类组件/test_3.1_Padding.dart';
+import 'package:lhj_test/dartTest/3_容器类组件/test_3.2_ConstrainedBox.dart';
+import 'package:lhj_test/dartTest/3_容器类组件/test_3.3_DecoratedBox.dart';
+import 'package:lhj_test/dartTest/3_容器类组件/test_3.4_Tranform.dart';
+import 'package:lhj_test/dartTest/3_容器类组件/test_3.5_Container.dart';
 
 /* 
 应用入口
@@ -51,7 +54,10 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>StackPositionedWidget(),
         // "new_page":(context)=>AlignWidget(),
         // "new_page":(context)=>PaddingRoute(),
-        "new_page":(context)=>SizeLimitWidget(),
+        // "new_page":(context)=>SizeLimitWidget(),
+        // "new_page":(context)=>DecoratedBoxTest(),
+        // "new_page":(context)=>TransformTest(),
+        "new_page":(context)=>ContainerTest(),
 
 
       },

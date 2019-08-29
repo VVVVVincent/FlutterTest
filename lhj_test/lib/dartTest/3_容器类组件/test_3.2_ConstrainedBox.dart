@@ -78,16 +78,6 @@ class SizeLimitWidget extends StatelessWidget {
         title: Text("尺寸限制器学习"),
         actions: <Widget>[
           UnconstrainedBox(
-            // child: SizedBox(
-            //   width: 20,
-            //   height: 20,
-            //   child: IconButton(
-            //     icon: Icon(Icons.account_circle),
-            //     onPressed: (){
-            //       print("你好");
-            //     },
-            //   ),
-            // ),
             child: Padding(
               padding: EdgeInsets.only(right: 20),
               child: SizedBox(
