@@ -20,6 +20,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   // 计时变量
   int _counter = 0;
+  int _selectedIndex = 0;
+  // TabController _tabController;
+  // List tabs = ["房源","客源","实勘"];
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _tabController = TabController(length: tabs.length, vsync: this._tabControlle);
+  // }
 
   // 自增函数
   void _incrementCounter() {
@@ -30,15 +38,52 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _onTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+      print(_selectedIndex);
+    });
+  } 
+
   // 当MyHomePage被第一次创建时，_MyHomePageState类就会被创建，
   // 并且状态的改变就要调用build方法，状态改变依赖该类，所以build方法放在了该类中
   @override
   Widget build(BuildContext context) {
     /// Material库中提供的页面脚手架，包含导航栏，标题和主屏幕页面的body属性以及按钮
     return Scaffold(
-      // 导航栏
+      // ---------导航栏
       appBar: AppBar(
         title: Text(widget.title),
+        // 导航栏右侧按钮
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.share),
+            onPressed: (){
+              print("点击了分享按钮");
+            },
+          )
+        ],
+        // bottom: TabBar(
+        //   controller: _tabController,
+        //   tabs: tabs.map(
+        //     (e) => Tab(text: e)
+        //   ).toList(),
+        // ),
+      ),
+
+      // ----------抽屉
+      drawer: new MyDrawer(),
+
+      // ----------底部导航
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
+          BottomNavigationBarItem(icon: Icon(Icons.message), title: Text("消息")),
+          BottomNavigationBarItem(icon: Icon(Icons.person), title: Text("我的")),
+        ],
+        currentIndex: _selectedIndex,
+        fixedColor: Colors.blue,
+        onTap: _onTap,
       ),
 
       // body：body的widget树包含一个Center widget（可以将所有子widget对齐到屏幕中心）
@@ -59,8 +104,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // 添加跳转按钮
             FlatButton(
-              child: Text("open new route"),
-              textColor: Colors.red,
+              child: Text("open new route", style: TextStyle(fontSize: 20),),
+              textColor: Colors.white,
+              color: Colors.red,
               onPressed: () {
                 /* 
                 跳转到新route：
@@ -105,6 +151,63 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+// 自定义抽屉
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({
+    Key key,
+  }):super(key:key);
+
+  @override
+  Widget build(BuildContext ctx) {
+    return Drawer(
+      child: MediaQuery.removePadding(
+        context: ctx,
+        // 移除抽屉菜单顶部默认留白
+        removeTop: true,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            //----头部
+            Padding(
+              padding: const EdgeInsets.only(top: 38.0),
+              child:Row(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: ClipOval(
+                      child: Image.asset("lib/images/二维码@2x.png",width: 80,),
+                    ),
+                  ),
+                  Text("lhj",style:TextStyle(fontWeight: FontWeight.bold))
+                ],
+              )
+            ),
+
+            //-------单元格
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  ListTile(
+                    leading: const Icon(Icons.add),
+                    title: const Text("add Account"),
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.settings),
+                    title: const Text("Manage accounts"),
+                  ),
+                ],
+              ),
+            ),
+
+          ],
+        ),
+
+      ),
+    );
+  }
+}
+
+
 /* 
 创建一个新页面路由：
     继承自StatelessWidget,界面简单显示一句话
@@ -134,21 +237,6 @@ class NewRoute extends StatelessWidget {
   }
 }
 
-class Img extends StatelessWidget {
-  // @override
-  Widget build(BuildContext context) {
-    // return new DecoratedBox(
-    //   decoration: new BoxDecoration(
-    //     image: new DecorationImage(
-    //       image: new AssetImage("images/我的客户.png"),
-    //     ),
-    //   ),
-    // );
-    // 加载本地图片 lib/images/二维码@2x.png
-    return Image.asset('lib/images/二维码@2x.png');
-  }
-}
-
 class ImgRoute extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
@@ -157,7 +245,7 @@ class ImgRoute extends StatelessWidget{
         backgroundColor: Colors.grey,
       ),
       body: Center( 
-        child:Img(),
+        child:Image.asset('lib/images/二维码@2x.png'),
       ),
     );
   }
