@@ -16,6 +16,9 @@ import 'package:lhj_test/dartTest/3_容器类组件/test_3.2_ConstrainedBox.dart
 import 'package:lhj_test/dartTest/3_容器类组件/test_3.3_DecoratedBox.dart';
 import 'package:lhj_test/dartTest/3_容器类组件/test_3.4_Tranform.dart';
 import 'package:lhj_test/dartTest/3_容器类组件/test_3.5_Container.dart';
+import 'package:lhj_test/dartTest/3_容器类组件/test_3.6_Clip.dart';
+import 'package:lhj_test/dartTest/4_可滚动组件/test_4.1_SingleChildScrollView.dart';
+import 'package:lhj_test/dartTest/4_可滚动组件/test_4.2_ListView.dart';
 
 /* 
 应用入口
@@ -57,7 +60,10 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>SizeLimitWidget(),
         // "new_page":(context)=>DecoratedBoxTest(),
         // "new_page":(context)=>TransformTest(),
-        "new_page":(context)=>ContainerTest(),
+        // "new_page":(context)=>ContainerTest(),
+        // "new_page":(context)=>ClipText(),
+        // "new_page":(context)=>SingleScrollViewTest(),
+        "new_page":(context)=>ListViewTest(),
 
 
       },
