@@ -19,6 +19,11 @@ import 'package:lhj_test/dartTest/3_容器类组件/test_3.5_Container.dart';
 import 'package:lhj_test/dartTest/3_容器类组件/test_3.6_Clip.dart';
 import 'package:lhj_test/dartTest/4_可滚动组件/test_4.1_SingleChildScrollView.dart';
 import 'package:lhj_test/dartTest/4_可滚动组件/test_4.2_ListView.dart';
+import 'package:lhj_test/dartTest/4_可滚动组件/test_4.3_GridView.dart';
+import 'package:lhj_test/dartTest/4_可滚动组件/test_4.4_CustomScrollView.dart';
+import 'package:lhj_test/dartTest/4_可滚动组件/test_4.5_ ScrollController.dart';
+import 'package:lhj_test/dartTest/5_功能性组件/test_5.1_ WillPopScope.dart';
+import 'package:lhj_test/dartTest/CheckTrust.dart';
 
 /* 
 应用入口
@@ -63,7 +68,12 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>ContainerTest(),
         // "new_page":(context)=>ClipText(),
         // "new_page":(context)=>SingleScrollViewTest(),
-        "new_page":(context)=>ListViewTest(),
+        // "new_page":(context)=>ListViewTest(),
+        // "new_page":(context)=>GridViewTest(),
+        // "new_page":(context)=>CustomScrollViewTest(),
+        // "new_page":(context)=>ScrollControllerTest(),
+        // "new_page":(context)=>WillPopScopeRoute(),
+        "new_page":(context)=>CheckTrustRoute(),
 
 
       },

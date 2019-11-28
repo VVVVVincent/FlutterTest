@@ -42,6 +42,11 @@ flutter:
    - lib/images/bank.png
    - lib/images/logo.png
    - lib/images/cus.jpg
+   - lib/images/1.JPG
+   - lib/images/2.JPG
+   - lib/images/3.JPG
+   - lib/images/4.JPG
+   - lib/images/5.JPG
 
 
 

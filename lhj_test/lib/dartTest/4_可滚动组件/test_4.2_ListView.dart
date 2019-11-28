@@ -1,6 +1,8 @@
 import 'package:english_words/english_words.dart' as prefix0;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter/widgets.dart';
 
 // --------1.少量组件时
 class ListViewTest1 extends StatelessWidget {
@@ -125,6 +127,24 @@ class _ListViewTest4State extends State <ListViewTest4> {
 }
 
 // ---------------5.带头视图的滚动视图
+class ListViewTest5 extends StatelessWidget {
+  Widget build(BuildContext ctx) {
+    return Column(
+      children: <Widget>[
+        ListTile(title: Text("数字展示"),),
+        
+        Expanded(
+          child: ListView.builder(
+            itemCount: 50,
+            itemBuilder: (BuildContext ctx, int index) {
+              return ListTile(title: Text("$index"),);
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}
 
 
 //---------------------
@@ -135,7 +155,8 @@ class ListViewTest extends StatelessWidget {
       // body: ListViewTest1(),
       // body: ListViewTest2(),
       // body: ListViewTest3(),
-      body: ListViewTest4(),
+      // body: ListViewTest4(),
+      body: ListViewTest5(),
     );
   }
 }
