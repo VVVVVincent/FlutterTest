@@ -135,7 +135,7 @@ class ListViewTest5 extends StatelessWidget {
         
         Expanded(
           child: ListView.builder(
-            itemCount: 50,
+            itemCount: 2,
             itemBuilder: (BuildContext ctx, int index) {
               return ListTile(title: Text("$index"),);
             },

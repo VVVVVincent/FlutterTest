@@ -65,7 +65,8 @@ class CheckTrustRoute extends StatelessWidget {
                             height: 30,
                             // color: Colors.red,
                             margin: EdgeInsets.only(left: 16.0),
-                            child: Text(
+                            child: 
+                            Text(
                               list1[index],
                               style:
                                   TextStyle(color: Colors.black, fontSize: 16),

@@ -4,11 +4,29 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "Dart: Run all Tests",
+            "type": "dart",
+            "request": "launch",
+            "program": "./test/"
+        },
+
+        {
+            "name": "Flutter",
+            "type": "dart",
+            "request": "launch",
+            "program":  "hj_test/lib/main.dart"
+        },
+        {
+            "name": "Flutter: Attach to Device",
+            "type": "dart",
+            "request": "attach"
+        },
         
 
         {
             "name": "Dart",
-            "program": "bin/main.dart",
+            "program": "lhj_test/lib/main.dart",//"bin/main.dart",
             "request": "launch",
             "type": "dart"
         }

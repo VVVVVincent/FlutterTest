@@ -23,7 +23,12 @@ import 'package:lhj_test/dartTest/4_可滚动组件/test_4.3_GridView.dart';
 import 'package:lhj_test/dartTest/4_可滚动组件/test_4.4_CustomScrollView.dart';
 import 'package:lhj_test/dartTest/4_可滚动组件/test_4.5_ ScrollController.dart';
 import 'package:lhj_test/dartTest/5_功能性组件/test_5.1_ WillPopScope.dart';
+import 'package:lhj_test/dartTest/5_功能性组件/test_5.2_ InheritedWidget.dart';
+
+
+
 import 'package:lhj_test/dartTest/CheckTrust.dart';
+
 
 /* 
 应用入口
@@ -43,6 +48,7 @@ class MyApp extends StatelessWidget {
       // 应用主题
       theme: ThemeData(
         primarySwatch: Colors.red,
+        brightness:Brightness.light,
       ),
 
       // 命名路由，注册路由表
@@ -73,9 +79,11 @@ class MyApp extends StatelessWidget {
         // "new_page":(context)=>CustomScrollViewTest(),
         // "new_page":(context)=>ScrollControllerTest(),
         // "new_page":(context)=>WillPopScopeRoute(),
-        "new_page":(context)=>CheckTrustRoute(),
+        "new_page":(context)=>InheritedWidgetTestRoute(),
 
 
+
+        // "new_page":(context)=>CheckTrustRoute(),
       },
 
       // 应用的首页路由Route（即页面，在iOS中相当于VC）
