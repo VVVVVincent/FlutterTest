@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // 添加跳转按钮
             FlatButton(
-              child: Text("点击跳转查看委托", style: TextStyle(fontSize: 20),),
+              child: Text("点击跳转下一页", style: TextStyle(fontSize: 20),),
               textColor: Colors.white,
               color: Colors.red,
               onPressed: () {

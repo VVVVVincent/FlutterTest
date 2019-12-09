@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
  * 比如我们在应用的根widget中通过InheritedWidget共享了一个数据，那么我们便可以在任意子widget中来获取该共享的数据！
  */
 
-// -----计数器”示例应用程序的InheritedWidget版本
+// ***********************计数器”示例应用程序的InheritedWidget版本
+// --------1.创建共享数据类
 class ShareDataWidget extends InheritedWidget {
   ShareDataWidget({@required this.data, Widget child}) : super(child: child);
 
@@ -26,7 +27,7 @@ class ShareDataWidget extends InheritedWidget {
   }
 }
 
-// ---- 实现一个子组件_TestWidget,build中引用ShareDataWidget的数据，同时在didChangeDependencies() 回调中打印日志
+// ---- 2.实现一个子组件_TestWidget,build中引用ShareDataWidget的数据，同时在didChangeDependencies() 回调中打印日志
 class _TestWidget extends StatefulWidget {
   @override
   _TestWidgetState createState() => new _TestWidgetState();
